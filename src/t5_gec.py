@@ -36,8 +36,6 @@ save_steps=1000
 model = T5ForConditionalGeneration.from_pretrained('t5-small')
 
 
-
-
 training_args = TrainingArguments(
     output_dir=output_path,
     num_train_epochs=epoch,
@@ -48,7 +46,7 @@ training_args = TrainingArguments(
     logging_dir='./logs',
     save_steps=save_steps,
 )
-
+train_dataset = TrainerDataset(train_data_path)
 trainer = Trainer(
     model=model,
     args=training_args,
