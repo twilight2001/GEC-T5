@@ -25,7 +25,7 @@ class TrainerDataset(Dataset):
         return {'input_ids':input_ids, 'labels':label}
     
 
-train_data_path = 'train.csv'
+train_data_path = '../data/train.csv'
 output_path = 'output.t5'
 epoch = 3
 batch_size=64
@@ -64,7 +64,7 @@ def predict(tokenizer, model, passages):
     return queries_decode
 
 tokenizer = T5Tokenizer.from_pretrained('t5-small')
-test_data = 'nucle.src'
+test_data = '../data/nucle.src'
 output = 'nucle.pred'
 pred_batch_size=1
 with open(test_data) as f,open(output, 'w') as f_out:
