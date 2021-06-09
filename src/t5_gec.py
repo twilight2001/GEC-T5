@@ -26,7 +26,7 @@ class TrainerDataset(Dataset):
         return {'input_ids':input_ids, 'labels':label}
 
 
-train_data_path = '/data/asadul/research/GEC-T5/data/wiki.tok.small'
+train_data_path = '/data/asadul/research/GEC-T5/data/wiki.tok.small.tsv'
 output_path = '/data/asadul/research/GEC-T5/output/'
 epoch = 3
 batch_size=64
